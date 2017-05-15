@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>4</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>5</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>6</td>
+        <td>9</td>
+    </tr>
+</table>
+<p><a href="#">Do it.</a>
+</p>
+
+
+</body>
+<script>
+$("a").click(function () {
+    $("table").each(function () {
+        var $this = $(this);
+        var newrows = [];
+        $this.find("tr").each(function () {
+            var i = 0;
+            $(this).find("td,th").each(function () {
+                i++;
+                if (newrows[i] === undefined) {
+                    newrows[i] = $("<tr></tr>");
+                }
+                newrows[i].append($(this));
+            });
+        });
+        $this.find("tr").remove();
+        $.each(newrows, function () {
+            $this.append(this);
+        });
+    });
+
+    return false;
+});
+</script>
+
+
+
+
+
+
+
+</html>
