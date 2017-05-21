@@ -148,7 +148,7 @@ function add_shift()
         }
     }
 
-    xmlhttp.open("GET","http://localhost:8000/add_bookin/"+formatphpDate(date)+"/"+name_id+"/"+getTwentyFourHourTime(starttime)
+    xmlhttp.open("GET","http://46.101.18.194/deproj2/demo/public/index.php/add_bookin/"+formatphpDate(date)+"/"+name_id+"/"+getTwentyFourHourTime(starttime)
 	 +"/"+getTwentyFourHourTime(endtime)+"/"+place_id, true);
      xmlhttp.send();
 		  
@@ -180,7 +180,7 @@ function addshift()
 	}
 	else
 	{
-		window.open("http://localhost:8000/addbookin/"+formatphpDate(date)+"/"+selected_id+"/"+name+"/"+getTwentyFourHourTime(starttime)
+		window.open("http://46.101.18.194/deproj2/demo/public/index.php/addbookin/"+formatphpDate(date)+"/"+selected_id+"/"+name+"/"+getTwentyFourHourTime(starttime)
 	 +"/"+getTwentyFourHourTime(endtime)+"/"+place_id);  
      
 		
@@ -196,7 +196,7 @@ function addshift()
 		
 		
         <!--  alert(name.getAttribute("fname") +" "+name.getAttribute("lname")+" id:"+name.getAttribute("id")); -->
-		<!--  window.open("http://localhost:8000/timetable/40/30/"+name.getAttribute("fname"), "mainwd"); -->
+		<!--  window.open("http://46.101.18.194/deproj2/demo/public/index.php/timetable/40/30/"+name.getAttribute("fname"), "mainwd"); -->
 		parent.name=name.getAttribute("fname")+" "+name.getAttribute("lname");
 		parent.selected_id=name.getAttribute("id");
 		parent.refreshbottom();  
@@ -492,7 +492,7 @@ function colourcells(start,end)
 function refreshmain()
 {
 // alert(name_id);
- $("#main_panel").load("http://localhost:8000/timetable/"+weeknumber+"/"+timeintervalsmins+"/"+name_id+"/"+year+"/"+place_id); 
+ $("#main_panel").load("http://46.101.18.194/deproj2/demo/public/index.php/timetable/"+weeknumber+"/"+timeintervalsmins+"/"+name_id+"/"+year+"/"+place_id); 
 
 }
 	
@@ -727,13 +727,13 @@ var name_id=0;
 	 selectedplace="";
 	 timeintervalsmins=60;
 	 name_id=0;
-	 //$("#temp").load("http://localhost:8000/temp"); 
-	 //$("#shiftpanel").load("http://localhost:8000/shiftbar");
+	 //$("#temp").load("http://46.101.18.194/deproj2/demo/public/index.php/temp"); 
+	 //$("#shiftpanel").load("http://46.101.18.194/deproj2/demo/public/index.php/shiftbar");
 	 //load timetable
 	
 	 //document.getElementById("starthour").value="ssss";
-	 $("#main_panel").load("http://localhost:8000/timetable/"+weeknumber+"/"+timeintervalsmins+"/"+"name"+"/"+year+"/"+place_id); 
-	 $("#topcontrol").load("http://localhost:8000/topbar/");
+	 $("#main_panel").load("http://46.101.18.194/deproj2/demo/public/index.php/timetable/"+weeknumber+"/"+timeintervalsmins+"/"+"name"+"/"+year+"/"+place_id); 
+	 $("#topcontrol").load("http://46.101.18.194/deproj2/demo/public/index.php/topbar/");
 	 
 	 
 	 
@@ -942,7 +942,7 @@ table th{
 	var side_starttime=getTwentyFourHourTime(starttime);
 	var side_endtime=getTwentyFourHourTime(endtime);
 	//mode,date,starttime,finish
-	var url=("http://localhost:8000/sidepanel/"+side_name+"/"+side_date+"/"+side_starttime+"/"+side_endtime);
+	var url=("http://46.101.18.194/deproj2/demo/public/index.php/sidepanel/"+side_name+"/"+side_date+"/"+side_starttime+"/"+side_endtime);
 	 var xmlhttp = new XMLHttpRequest();
     
     xmlhttp.onreadystatechange = function() {
@@ -1039,7 +1039,7 @@ table th{
 			 document.getElementById('addbutton').style.visibility = 'visible';
 			 document.getElementById('cancel').style.visibility = 'visible'; 
 			  <!-- sendinfo=date+"$"+starttime+"$"+endtime+"$"+"ggggg"; -->
-			  <!--window.open("http://localhost:8000/bottom/"+sendinfo, "Bottomoptions");-->
+			  <!--window.open("http://46.101.18.194/deproj2/demo/public/index.php/bottom/"+sendinfo, "Bottomoptions");-->
 		 }
 		 
 		
@@ -1058,7 +1058,7 @@ table th{
 		name_id=name.id;
 		$("#names").val(name.id);
 		
-		//window.open("http://localhost:8000/sidepanel/"+sidepane, "sideoptions"); 
+		//window.open("http://46.101.18.194/deproj2/demo/public/index.php/sidepanel/"+sidepane, "sideoptions"); 
 	// }		
 		
 	 }

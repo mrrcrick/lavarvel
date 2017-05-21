@@ -84,14 +84,14 @@
 						}
 					}
 
-					xmlhttp.open("GET","http://localhost:8000/addshift/1/1/1/1/1/1", true);
+					xmlhttp.open("GET","http://46.101.18.194/deproj2/demo/public/index.php/addshift/1/1/1/1/1/1", true);
 				   // xmlhttp.send();
 						  
 					 
 						
 						
 					}
-					window.open("http://localhost:8000/addshift/1/1/1/1/1/1");  
+					window.open("http://46.101.18.194/deproj2/demo/public/index.php/addshift/1/1/1/1/1/1");  
      
 					place_id="all";
 				 
